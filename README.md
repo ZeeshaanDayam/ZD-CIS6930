@@ -61,70 +61,76 @@ Create a folder for the generated files and run the ANTLR4 tool:
 ```bash
 mkdir gen
 antlr4 Delphi.g4 -o gen -listener -visitor
+```
 2. Compile the Generated Files
 Change to the gen directory and compile all generated Java files:
 
-bash
-Copy
+```bash
 cd gen
 javac -cp ".;C:\antlr4\antlr-4.13.2-complete.jar" *.java
 cd ..
+```
 3. Compile the Interpreter
 Compile the interpreter using the generated classes:
 
-bash
-Copy
+```bash
 javac -cp ".;gen;C:\antlr4\antlr-4.13.2-complete.jar" DelphiInterpreter.java
+```
 4. Run the Interpreter
 Run the interpreter on any of the test case files. Examples:
 
 Class Creation Test:
 
-bash
-Copy
+```bash
 java -cp ".;gen;C:\antlr4\antlr-4.13.2-complete.jar" DelphiInterpreter TestClassCreation.pas
+```
 Inheritance Test:
 
-bash
-Copy
+```bash
 java -cp ".;gen;C:\antlr4\antlr-4.13.2-complete.jar" DelphiInterpreter TestInheritance.pas
+```
 I/O Test:
 
-bash
-Copy
+```bash
 java -cp ".;gen;C:\antlr4\antlr-4.13.2-complete.jar" DelphiInterpreter TestIO.pas
+```
 Object Creation Test:
 
-bash
-Copy
+```bash
 java -cp ".;gen;C:\antlr4\antlr-4.13.2-complete.jar" DelphiInterpreter TestObjCreation.pas
+```
 Procedure Test:
 
-bash
-Copy
+```bash
+
 java -cp ".;gen;C:\antlr4\antlr-4.13.2-complete.jar" DelphiInterpreter TestPROC.pas
+```
 Function Test (if implemented):
 
-bash
-Copy
+```bash
+
 java -cp ".;gen;C:\antlr4\antlr-4.13.2-complete.jar" DelphiInterpreter TestFunc.pas
+```
 Break Statement Test:
 
-bash
-Copy
+```bash
+
 java -cp ".;gen;C:\antlr4\antlr-4.13.2-complete.jar" DelphiInterpreter TESTBREAK.pas
+```
 Continue Statement Test:
 
-bash
-Copy
+```bash
+
 java -cp ".;gen;C:\antlr4\antlr-4.13.2-complete.jar" DelphiInterpreter TESTCONTINUE.pas
+```
 While Loop Test:
 
-bash
-Copy
+```bash
 java -cp ".;gen;C:\antlr4\antlr-4.13.2-complete.jar" DelphiInterpreter TestWhile.pas
+```
 For Loop Test:
 
-bash
-Copy
+```bash
+
 java -cp ".;gen;C:\antlr4\antlr-4.13.2-complete.jar" DelphiInterpreter TestFor.pas
+```
