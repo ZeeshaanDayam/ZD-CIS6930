@@ -20,11 +20,8 @@ This project implements a Delphi-like interpreter using ANTLR4 and Java. It supp
 
 The project comes with a suite of test cases to verify interpreter functionality:
 
-- **TestClassCreation.pas**  
-  Tests class creation, method and constructor declarations, and proper handling of class-related operations.
-
-- **TestInheritance.pas**  
-  Demonstrates inheritance, including a base class and a derived class with method overriding.
+- **TestRepeat.pas**  
+  Validates REPEAT UNTILL loop iteration.
 
 - **TestIO.pas**  
   Validates I/O operations using built-in procedures such as `READ` and `PRINT`.
@@ -79,16 +76,12 @@ javac -cp ".;gen;C:\antlr4\antlr-4.13.2-complete.jar" DelphiInterpreter.java
 4. Run the Interpreter
 Run the interpreter on any of the test case files. Examples:
 
-Class Creation Test:
+Repeat Test:
 
 ```bash
-java -cp ".;gen;C:\antlr4\antlr-4.13.2-complete.jar" DelphiInterpreter TestClassCreation.pas
+java -cp ".;gen;C:\antlr4\antlr-4.13.2-complete.jar" DelphiInterpreter TestRepeat.pas
 ```
-Inheritance Test:
 
-```bash
-java -cp ".;gen;C:\antlr4\antlr-4.13.2-complete.jar" DelphiInterpreter TestInheritance.pas
-```
 I/O Test:
 
 ```bash
